@@ -41,6 +41,31 @@ Este projeto consiste em uma API RESTful completa para gerenciar contas bancári
 A documentação detalhada da API, incluindo descrições de endpoints, métodos HTTP, parâmetros, status codes e exemplos de requisições e respostas. Para acessá-la:
 `http://localhost:3000/contas` </br>
 
+### Funcionalidades da API Banco Digital: </br>
+  1. **Criar Contas Bancárias:**
+- Permite a criação de novas contas bancárias para clientes, atribuindo um número de conta único e definindo os dados do usuário (nome, CPF, data de nascimento, telefone, email e senha).
+
+  2. **Listar Contas Bancárias:**
+- Permite visualizar a lista de todas as contas bancárias existentes, incluindo informações básicas como número da conta, nome do titular e saldo.
+
+  3. **Atualizar Dados do Usuário:**
+- Permite a atualização dos dados cadastrais do usuário de uma conta bancária, como nome, CPF, data de nascimento, telefone, email e senha.
+
+  4. **Excluir Contas Bancárias:**
+- Permite a exclusão de uma conta bancária, desde que o saldo seja zero.
+
+  5. **Realizar Depósitos:**
+- Permite a realização de depósitos em dinheiro em uma conta bancária, incrementando o saldo da conta.
+
+  6. **Sacar Dinheiro:**
+- Permite a realização de saques em dinheiro de uma conta bancária, decrementando o saldo da conta, desde que o valor seja positivo e o saldo seja suficiente.
+
+  7. **Consultar Saldo:**
+- Permite a consulta do saldo atual de uma conta bancária.
+
+  9. **Obter Extrato Bancário:**
+- Permite a consulta do histórico de transações (depósitos, saques e transferências) de uma conta bancária em um determinado período.
+#### 
 
 ### Observações:
 
