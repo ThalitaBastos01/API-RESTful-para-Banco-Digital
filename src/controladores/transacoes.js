@@ -10,7 +10,7 @@ const depositar = (req, res) => {
     }
 
     const numeroDaConta = contas.find((contaBancaria) => {
-        return contaBancaria.numero === Number(numero_conta);
+        return contaBancaria.numero === numero_conta;
     });
 
     if (!numeroDaConta) {
@@ -44,11 +44,11 @@ const sacar = (req, res) => {
     }
 
     const numeroDaConta = contas.find((conta) => {
-        return conta.numero === Number(numero_conta);
+        return conta.numero === numero_conta;
     });
 
     if (!numeroDaConta) {
-        return res.status(404).json({ mensagem: "Conta não encontrada"}); //verificação da existencia da conta
+        return res.status(404).json({ mensagem: "Conta não encontrada" }); //verificação da existencia da conta
     }
 
     if (numeroDaConta.usuario.senha !== senha) {
@@ -56,7 +56,7 @@ const sacar = (req, res) => {
     }
 
     if (numeroDaConta.saldo < valor) {
-        return res.status(403).json({ mensagem: "Saldo insuficiente"}); // verificando se há saldo suficiente para saque
+        return res.status(403).json({ mensagem: "Saldo insuficiente" }); // verificando se há saldo suficiente para saque
     }
 
     numeroDaConta.saldo -= Number(valor); //saque
@@ -76,7 +76,7 @@ const transferir = (req, res) => {
     const { numero_conta_origem, numero_conta_destino, valor, senha } = req.body;
 
     if (!numero_conta_origem || !numero_conta_destino || !valor || !senha) {
-        return res.status(400).json({ mensagem: 'O preenchimento de todos os campos são obrigatórios!' }); 
+        return res.status(400).json({ mensagem: 'O preenchimento de todos os campos são obrigatórios!' });
     }//verificando se esses dados foram informados no body
 
     const contaOrigem = contas.find((contaBancaria) => {

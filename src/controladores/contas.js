@@ -69,7 +69,7 @@ const atualizarContaBancaria = (req, res) => {
 
     //Verificar se o numero da conta
     const numeroDaConta = contas.find((contaBancaria) => {
-        return contaBancaria.numero === Number(numeroConta);
+        return contaBancaria.numero === numeroConta;
     });
 
     if (!numeroDaConta) {
@@ -118,7 +118,7 @@ const excluirContaBancaria = (req, res) => {
 
     // Verificar se o numero da conta passado como parametro na URL é válido
     const numeroDaConta = contas.find((contaBancaria) => {
-        return contaBancaria.numero === Number(numeroConta);
+        return contaBancaria.numero === numeroConta;
     });
 
     if (!numeroDaConta) {
@@ -146,11 +146,11 @@ const exibirSaldo = (req, res) => {
     } //senha válida
 
     const numeroDaConta = contas.find((contaBancaria) => {
-        return contaBancaria.numero === Number(numero_conta);
+        return contaBancaria.numero === numero_conta;
     });
 
     if (!numeroDaConta) {
-        return res.status(404).json({ mensagem: 'Conta bancária não enconttada!' });
+        return res.status(404).json({ mensagem: 'Conta bancária não encontrada!' });
     } //verificação da conta
 
     if (numeroDaConta.usuario.senha !== senha) {
@@ -168,7 +168,7 @@ const exibirExtrato = (req, res) => {
     }
 
     const numeroDaConta = contas.find((contaBancaria) => {
-        return contaBancaria.numero === Number(numero_conta);
+        return contaBancaria.numero === numero_conta;
     });
 
     if (!numeroDaConta) {
